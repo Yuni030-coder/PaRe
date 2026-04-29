@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PalettenRetter - Nachhaltige Logistik</title>
+    <style>
+        /* Farbschema: Hellgrün (#90BE6D) und Hellbraun (#A68A64) */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: #ffffff; /* Weiße Schrift für gute Lesbarkeit */
+            background-color: #90BE6D; /* Hellgrüner Hintergrund */
+        }
+
+        header {
+            background-color: #A68A64; /* Hellbrauner Header */
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Simples Logo-Design */
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            border: 3px solid #ffffff;
+            padding: 10px 20px;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+
+        .main-content {
+            max-width: 1100px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Zwei Spalten */
+            gap: 40px;
+            padding: 20px;
+        }
+
+        /* Linke Seite: Vision */
+        .vision-box {
+            background: rgba(255, 255, 255, 0.1); /* Transparente Box für Struktur */
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        h2 {
+            border-bottom: 2px solid #A68A64;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        /* Rechte Seite: Kontaktformular */
+        .contact-box {
+            background: #A68A64; /* Hellbraune Box */
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .contact-box label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .contact-box input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box; /* Verhindert das Überlappen */
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: #90BE6D;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #769e58;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design für Handys */
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">PalettenRetter</div>
+        <p style="margin-top: 15px; font-style: italic;">Nachhaltig. Effizient. Kostenlos.</p>
+    </header>
+
+    <div class="main-content">
+        <section class="vision-box">
+            <h2>Unsere Vision</h2>
+            <p>
+                Unsere Vision ist es, gebrauchte Paletten einfach, kostenlos und nachhaltig in den Wirtschaftskreislauf zurückzuführen. 
+                Wir schaffen effiziente Lösungen für Unternehmen, reduzieren Abfall und schonen wertvolle Ressourcen durch Wiederverwendung. 
+                So gestalten wir eine Zukunft, in der jede Palette wieder eingesetzt wird.
+            </p>
+        </section>
+
+        <section class="contact-box">
+            <h2>Kontakt aufnehmen</h2>
+            <form action="https://formspree.io/f/palettenretter@gmx.ch" method="POST">
+                <label for="name">Name / Firma</label>
+                <input type="text" id="name" name="name" placeholder="Dein Name" required>
+
+                <label for="phone">Telefonnummer</label>
+                <input type="tel" id="phone" name="phone" placeholder="0123 456789" required>
+
+                <label for="count">Anzahl der Paletten</label>
+                <input type="number" id="count" name="count" placeholder="z.B. 15" required>
+
+                <button type="submit" class="submit-btn">Anfrage absenden</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2026 PalettenRetter | palettenretter@gmx.ch
+    </footer>
+
+</body>
+</html>
