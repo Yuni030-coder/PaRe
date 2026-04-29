@@ -10,18 +10,17 @@
             font-family: 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
-            color: #ffffff; /* Weiße Schrift für gute Lesbarkeit */
-            background-color: #90BE6D; /* Hellgrüner Hintergrund */
+            color: #ffffff;
+            background-color: #90BE6D;
         }
 
         header {
-            background-color: #A68A64; /* Hellbrauner Header */
+            background-color: #A68A64;
             padding: 40px 20px;
             text-align: center;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        /* Simples Logo-Design */
         .logo {
             font-size: 2.5rem;
             font-weight: bold;
@@ -36,14 +35,13 @@
             max-width: 1100px;
             margin: 40px auto;
             display: grid;
-            grid-template-columns: 1fr 1fr; /* Zwei Spalten */
+            grid-template-columns: 1fr 1fr;
             gap: 40px;
             padding: 20px;
         }
 
-        /* Linke Seite: Vision */
-        .vision-box {
-            background: rgba(255, 255, 255, 0.1); /* Transparente Box für Struktur */
+        .mission-box {
+            background: rgba(255, 255, 255, 0.1);
             padding: 30px;
             border-radius: 12px;
         }
@@ -54,9 +52,28 @@
             margin-top: 0;
         }
 
-        /* Rechte Seite: Kontaktformular */
+        .highlight-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .highlight-list li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .highlight-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
         .contact-box {
-            background: #A68A64; /* Hellbraune Box */
+            background: #A68A64;
             padding: 30px;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
@@ -74,7 +91,7 @@
             margin-bottom: 15px;
             border: none;
             border-radius: 5px;
-            box-sizing: border-box; /* Verhindert das Überlappen */
+            box-sizing: border-box;
         }
 
         .submit-btn {
@@ -101,7 +118,6 @@
             opacity: 0.8;
         }
 
-        /* Responsive Design für Handys */
         @media (max-width: 768px) {
             .main-content {
                 grid-template-columns: 1fr;
@@ -117,13 +133,19 @@
     </header>
 
     <div class="main-content">
-        <section class="vision-box">
-            <h2>Unsere Vision</h2>
+        <section class="mission-box">
+            <h2>Unsere Mission</h2>
             <p>
-                Unsere Vision ist es, gebrauchte Paletten einfach, kostenlos und nachhaltig in den Wirtschaftskreislauf zurückzuführen. 
+                Unsere Mission ist es, gebrauchte <strong>Paletten</strong> und <strong>SBB-Rähmen</strong> einfach, kostenlos und nachhaltig in den Wirtschaftskreislauf zurückzuführen. 
                 Wir schaffen effiziente Lösungen für Unternehmen, reduzieren Abfall und schonen wertvolle Ressourcen durch Wiederverwendung. 
-                So gestalten wir eine Zukunft, in der jede Palette wieder eingesetzt wird.
+                So gestalten wir eine Zukunft, in der jede Palette und jeder Rahmen wieder eingesetzt wird.
             </p>
+            <p><strong>Kostenloser Service im Kanton Zürich:</strong></p>
+            <ul class="highlight-list">
+                <li>Abholung von Paletten & SBB-Rähmen</li>
+                <li>Gültig im gesamten Kanton Zürich</li>
+                <li>Direkt vor Ihrer Haustür / Firma</li>
+            </ul>
         </section>
 
         <section class="contact-box">
@@ -135,8 +157,8 @@
                 <label for="phone">Telefonnummer</label>
                 <input type="tel" id="phone" name="phone" placeholder="0123 456789" required>
 
-                <label for="count">Anzahl der Paletten</label>
-                <input type="number" id="count" name="count" placeholder="z.B. 15" required>
+                <label for="count">Anzahl Paletten/Rähmen (zum Abgeben)</label>
+                <input type="text" id="count" name="count" placeholder="z.B. 10 Paletten, 5 Rähmen" required>
 
                 <button type="submit" class="submit-btn">Anfrage absenden</button>
             </form>
